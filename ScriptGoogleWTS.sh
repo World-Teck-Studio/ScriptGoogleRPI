@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd
 clear
 sleep "2"
 echo "== SCRIPT DE WORLD-TECK STUDIO == "
