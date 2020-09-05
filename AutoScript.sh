@@ -33,44 +33,16 @@ clear
 
 # ------------------------------------------------------------
 
-confirm() { read -r -p "${1} [y/N] " response
-
-case "$response" in
-[yY][eE][sS]|[yY])
-true
-;;
-*)
-false
-;;
-esac
-
-}
-
-if confirm "Vous les vous redemmarer le raspberry (Y) ou Tester un talk Google (N)?"; then
-
-clear echo "Le script est terminer"
-sleep "2"
-clear
-
-echo "Merci d'avoir suivit le tuto..."
-
-sleep "4"
-
-clear
-sudo Reboot
-
-else
-
-clear 
-echo "Le script est terminer"
-sleep "2"
-clear
-
-# ------------------------------------------------------------
-
 echo "Merci d'avoir suivit le tuto..."
 sleep "4"
-clear
-echo "Copier coller le code : googlesamples-assistant-pushtotalk "
+echo ".............................."
+sleep "1"
+echo "Copier coller le code : googlesamples-assistant-pushtotalk --project-id IDPROJECT --device-model-id VOTREID"
+sleep "1"
+echo "..............................--"
+sleep "1"
+echo "Copier coller le code : sudo reboot"
+sleep "1"
+echo "..............................--"
 sleep "4"
 fi
