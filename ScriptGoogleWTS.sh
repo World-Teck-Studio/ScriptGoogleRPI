@@ -10,13 +10,11 @@ sleep "6"
 clear
 
 # ------------------------------------------------------------
-echo "Telechargement des fichier installation"
+echo "Configuration des fichier installation"
 sleep "2"
 
-sudo apt-get install git -y && git clone https://github.com/World-Teck-Studio/ScriptGoogleRPI.git
-sleep"2"
-cd /home/pi/ScriptGoogleRPI/
 chmod +x ScriptGoogleWTS.sh && chmod +x start_assistant.sh
+cd
 sleep"2"
 clear
 
