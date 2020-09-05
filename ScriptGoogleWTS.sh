@@ -13,8 +13,8 @@ clear
 echo "Configuration des fichier installation"
 sleep "2"
 
-chmod +x ScriptGoogleWTS.sh && chmod +x start_assistant.sh
-cd
+chmod +x ScriptGoogleWTS.sh && chmod +x start_assistant.sh && chmod +x AutoScript.sh
+cd /home/pi
 sleep"2"
 clear
 
@@ -24,7 +24,7 @@ echo "Verification de la mise à jour Raspbian"
 sleep "2"
 clear
 
-echo "Mise e jour de Rasbian"
+echo "Mise a jour de Rasbian"
 sleep "2"
 sudo apt-get update && sudo apt-get upgrade -y
 clear
@@ -71,7 +71,10 @@ fi
 echo "Configuration du Fichier son."
 cd /home/pi/ScriptGoogleRPI/
 mv .asoundrc /home/pi/
-cd
+
+sleep "2"
+
+cd /home/pi
 sudo nano .asoundrc
 clear
 sleep"4"
@@ -181,21 +184,17 @@ clear
 echo "Configuration de Google Home via Internet" 
 sleep "3"
 
-echo "Lien 1:" 
-sleep "2"
+echo "Lien 1:"
 echo "......................:" 
 sleep "1"
-
 echo "https://console.actions.google.com/" 
+
 sleep "1"
-
-echo "Lien 2:" 
-sleep "2"
-
 echo "......................:" 
+echo "Lien 2:" 
 sleep "1"
-
 echo "https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview" 
+
 sleep "3"
 
 
@@ -239,18 +238,22 @@ fi
 echo "Configuration de python3 P1" 
 sleep "3"
 sudo apt-get install python3-dev python3-venv -y
+clear
 
 echo "Configuration de python3 P2" 
 sleep "3"
 python3 -m venv env
+clear
 
 echo "Configuration de python3 P3" 
 sleep "3"
 env/bin/python -m pip install --upgrade pip setuptools wheel
+clear
 
 echo "Configuration de python3 P4" 
 sleep "3"
 source env/bin/activate
+clear
 
 echo "Configuration de python3 TERMINER" 
 sleep "3"
@@ -258,24 +261,24 @@ clear
 
 # ------------------------------------------------------------
 
-echo "Installation de GOOGLE HOME" 
+echo "Installation du pack de GOOGLE HOME" 
 sleep "3"
 clear
 
 echo "Installation de GOOGLE HOME Partie 1" 
 sleep "3"
-clear
 sudo apt-get install portaudio19-dev libffi-dev libssl-dev -y
+clear
 
 echo "Installation de GOOGLE HOME Partie 2" 
 sleep "3"
-clear
 python -m pip install --upgrade google-assistant-sdk[samples]
+clear
 
 echo "Installation de GOOGLE HOME Partie 3" 
 sleep "3"
-clear
 python -m pip install --upgrade google-auth-oauthlib[tool]
+clear
 
 echo "Installation de GOOGLE HOME TERMINER" 
 sleep "3"
@@ -283,75 +286,19 @@ clear
 
 # ------------------------------------------------------------
 
-echo "Demarrage AUTOMATIQUE de GOOGLE HOME" 
-sleep "4"
-clear
-
-nano /home/pi/ScriptGoogleRPI/start_assistant.sh
-
-
-echo "Demarrage des service " 
-sleep "4"
-clear
-
-cd /home/pi/ScriptGoogleRPI/
-mv assistant.service /lib/systemd/system/
-cd
-
-sudo systemctl enable assistant.service
-
-sudo systemctl start assistant.service
-
+echo "Partie 1 TERMINER"
+sleep "3"
 clear
 
 
-
-# ------------------------------------------------------------
-
-confirm()
-{
-    read -r -p "${1} [y/N] " response
-
-    case "$response" in
-        [yY][eE][sS]|[yY]) 
-            true
-            ;;
-        *)
-            false
-            ;;
-    esac
-}
-
-if confirm "Vous les vous redemmarer le raspberry (Y) ou Tester un talk Google (N)?"; then
-
-
-clear
-echo "Le script est terminer"
+echo "Copier et coller les codes suiviant :"
 sleep "2"
-clear
-
-echo "Merci d'avoir suivit le tuto..."
-sleep "4"
-clear
-
-sudo Reboot
-
-
-else
-
-clear
-echo "Le script est terminer"
+echo "source env/bin/activate"
+echo "-----------------------"
 sleep "2"
-clear
-
-echo "Merci d'avoir suivit le tuto..."
-sleep "4"
-clear
-
-echo "Copier coller le code :  googlesamples-assistant-pushtotalk  "
-sleep "4"
-clear
-
-fi
-
-clear
+echo "google-oauthlib-tool --client-secrets VOTREFICHER.JON --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless"
+echo "-----------------------"
+sleep "2"
+echo "sudo /home/pi/ScriptGoogleRPI/AutoScript.sh"
+echo "-----------------------"
+sleep "3"
