@@ -77,9 +77,9 @@ sleep "2"
 cd /home/pi
 sudo nano .asoundrc
 clear
-sleep"4"
+sleep "4"
 echo "Configuration du Fichier son TERMINER."
-sleep"3"
+sleep "3"
 clear
 
 # ------------------------------------------------------------
