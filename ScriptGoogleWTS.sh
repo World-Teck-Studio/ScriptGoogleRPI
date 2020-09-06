@@ -15,7 +15,7 @@ sleep "2"
 
 chmod +x ScriptGoogleWTS.sh && chmod +x start_assistant.sh && chmod +x AutoScript.sh
 cd /home/pi
-sleep"2"
+sleep "2"
 clear
 
 # ------------------------------------------------------------
@@ -74,7 +74,7 @@ mv .asoundrc /home/pi/
 
 sleep "2"
 
-cd /home/pi
+cd /home/pi/
 sudo nano .asoundrc
 clear
 sleep "4"
@@ -193,13 +193,14 @@ sleep "1"
 echo "......................:" 
 echo "Lien 2:" 
 sleep "1"
-echo "https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview" 
-
+echo "https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview"
+sleep "1"
+echo "......................:" 
 sleep "3"
 
 
 
-echo "Suivez les etapes de la vidéo avant de continuer" 
+echo "Suivez les etapes de la video avant de continuer" 
 sleep "2"
 
 confirm()
@@ -216,7 +217,7 @@ confirm()
     esac
 }
 
-if confirm "Avez-vous le fichier .JSON et la ligne de commande modifier?"; then
+if confirm "Avez-vous le fichier .JSON ?"; then
 
 clear
 echo "Installation de python3"
@@ -227,9 +228,7 @@ else
 
 echo "Vous avez rencontrer un probleme ? Merci de patienter le script redemare."
 sleep "2"  
-
 sudo sh /home/pi/ScriptGoogleRPI/ScriptGoogleWTS.sh
-
 sleep "4"
 fi
 
@@ -238,11 +237,13 @@ fi
 echo "Configuration de python3 P1" 
 sleep "3"
 sudo apt-get install python3-dev python3-venv -y
+sleep "1"
 clear
 
 echo "Configuration de python3 P2" 
 sleep "3"
 python3 -m venv env
+sleep "1"
 clear
 
 echo "Configuration de python3 P3" 
