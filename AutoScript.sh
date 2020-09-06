@@ -5,7 +5,7 @@ sleep "2"
 echo "== SCRIPT DE WORLD-TECK STUDIO == "
 echo "== YOUTUBE: world-teck STUDIO =="
 echo "== TWITCH: WorldTeck_studio_ =="
-echo "== Version du script 1.0 AUTOMATIQUE =="
+echo "== Version du script 2.1 AUTOMATIQUE =="
 sleep "6"
 clear
 
@@ -25,24 +25,32 @@ clear
 
 cd /home/pi/ScriptGoogleRPI/
 mv assistant.service /lib/systemd/system/
-cd /home/pi
+cd /home/pi/
+sleep "2"
+clear
 
+echo "Recherche du service"
 sudo systemctl enable assistant.service
+sleep "4"
+clear
+
+echo "Service Activer "
 sudo systemctl start assistant.service
+sleep "4"
 clear
 
 # ------------------------------------------------------------
 
-echo "Merci d'avoir suivit le tuto..."
+echo "Merci d'avoir suivi le tuto..."
 sleep "4"
 echo ".............................."
 sleep "1"
 echo "Copier coller le code : googlesamples-assistant-pushtotalk --project-id IDPROJECT --device-model-id VOTREID"
 sleep "1"
-echo "..............................--"
+echo ".............................."
 sleep "1"
 echo "Copier coller le code : sudo reboot"
 sleep "1"
-echo "..............................--"
+echo ".............................."
 sleep "4"
 fi
