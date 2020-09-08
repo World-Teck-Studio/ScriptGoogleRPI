@@ -53,4 +53,3 @@ echo "Copier coller le code : sudo reboot"
 sleep "1"
 echo ".............................."
 sleep "4"
-fi
