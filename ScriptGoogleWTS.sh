@@ -10,7 +10,7 @@ sleep "6"
 clear
 
 # ------------------------------------------------------------
-echo "Configuration des fichier installation"
+echo "Configuration des fichiers installation"
 sleep "2"
 
 chmod +x ScriptGoogleWTS.sh && chmod +x start_assistant.sh && chmod +x AutoScript.sh
@@ -20,16 +20,16 @@ clear
 
 # ------------------------------------------------------------
 
-echo "Verification de la mise à jour Raspbian"
+echo "Vérification de la mise à jour Raspbian"
 sleep "2"
 clear
 
-echo "Mise a jour de Rasbian"
+echo "Mise à jour de Rasbian"
 sleep "2"
 sudo apt-get update && sudo apt-get upgrade -y
 clear
 
-echo "Mise a jour de Raspbian == TERMINER=="
+echo "Mise à jour de Raspbian == TERMINER=="
 sleep "2"
 clear
 
@@ -49,7 +49,7 @@ confirm()
     esac
 }
 
-if confirm "Avez-vous brancher votre micro en USB?"; then
+if confirm "Avez-vous branché votre micro en USB?"; then
 
 echo "configuration du micro USB."
 sudo arecord -l
@@ -58,7 +58,7 @@ clear
 
 else
 
-echo "Vous avez rencontrer un probleme ? Merci de patienter le script redemare."
+echo "Vous avez rencontré un probleme ? Merci de patienter le script redémare."
 sleep "2"  
 
 sudo sh /home/pi/ScriptGoogleRPI/ScriptGoogleWTS.sh
@@ -108,7 +108,7 @@ echo "Test micro dans 1"
 sleep "1"
 clear
 
-echo "Parler pendant 5 secondes" 
+echo "Parlez pendant 5 secondes" 
 sleep "1"
 clear
 
@@ -161,14 +161,14 @@ confirm()
 
 if confirm "Avez-vous entendu votre voix?"; then
 
-echo "Test du micro terminer"
+echo "Test du micro terminé"
 
 sleep "2"
 clear
 
 else
 
-echo "Vous avez rencontrer un probleme ? Merci de patienter le script redemare."
+echo "Vous avez rencontré un probleme ? Merci de patienter le script redémare."
 sleep "2"  
 
 sudo sh /home/pi/ScriptGoogleRPI/ScriptGoogleWTS.sh
@@ -200,7 +200,7 @@ sleep "3"
 
 
 
-echo "Suivez les etapes de la video avant de continuer" 
+echo "Suivez les étapes de la video avant de continuer" 
 sleep "2"
 
 confirm()
@@ -226,7 +226,7 @@ clear
 
 else
 
-echo "Vous avez rencontrer un probleme ? Merci de patienter le script redemare."
+echo "Vous avez rencontré un probleme ? Merci de patienter le script redémare."
 sleep "2"  
 sudo sh /home/pi/ScriptGoogleRPI/ScriptGoogleWTS.sh
 sleep "4"
