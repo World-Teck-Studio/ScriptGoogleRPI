@@ -11,7 +11,7 @@ clear
 
 # ------------------------------------------------------------
 
-echo "Demarrage AUTOMATIQUE de GOOGLE HOME"
+echo "Démarrage AUTOMATIQUE de GOOGLE HOME"
 sleep "4"
 clear
 
@@ -19,7 +19,7 @@ nano /home/pi/ScriptGoogleRPI/start_assistant.sh
 
 # ------------------------------------------------------------
 
-echo "Demarrage des service "
+echo "Démarrage des services "
 sleep "4"
 clear
 
